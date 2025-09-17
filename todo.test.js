@@ -1,4 +1,4 @@
-const { addTask } = require('./todo');
+const { addTask, deleteTask } = require('./todo');
 
 describe('Todo App', () => {
 	it('should add a new task to the list', () => {
@@ -10,7 +10,7 @@ describe('Todo App', () => {
 	it('should delete a task from the list', () => {
 		let tasks = ['Write Test', 'Drink coffee'];
 		tasks = deleteTask(tasks, 'Write Test');
-		expect(tasks).tContain('Drink coffee');
+		expect(tasks).toContain('Drink coffee');
 		expect(tasks.length).toBe(1);
 	});
 });
