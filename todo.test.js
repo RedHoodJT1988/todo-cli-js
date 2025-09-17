@@ -7,4 +7,10 @@ describe('Todo App', () => {
 		expect(tasks).toContain('Write Test');
 		expect(tasks.length).toBe(1);
 	});
+	it('should delete a task from the list', () => {
+		let tasks = ['Write Test', 'Drink coffee'];
+		tasks = deleteTask(tasks, 'Write Test');
+		expect(tasks).tContain('Drink coffee');
+		expect(tasks.length).toBe(1);
+	});
 });
