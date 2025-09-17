@@ -2,4 +2,8 @@ function addTask(tasks, newTask) {
 	return [...tasks, newTask];
 }
 
-module.exports = { addTask };
+function deleteTask(tasks, taskToDelete) {
+	return tasks.filter(task => task !== taskToDelete);
+}
+
+module.exports = { addTask, deleteTask};
